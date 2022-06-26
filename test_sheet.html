@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test development sheet</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/print.css">
+
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Federo&family=Flow+Block&family=Kristi&family=Limelight&family=Special+Elite&display=swap');
+
+      body {
+        font-family: 'Special Elite', cursive !important;
+        background-color: #333;
+        color: white;
+
+        padding: 0;
+        margin: 0;
+      }
+
+      .character h2 {
+        margin-top: 3rem;
+      }
+
+      .character {
+        margin-top: 2rem;
+      }
+
+
+      .divider {
+        display: block;
+        width: 10rem;
+        margin: 1.5rem auto;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+
+        overflow: hidden;
+      }
+
+
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-top: .5rem;
+      }
+
+      .flex-row.center {
+        justify-content: center;
+      }
+
+
+      /* NEW STUFF */
+      .test-wrapper {
+        display: grid !important;
+        grid-template-columns: 2fr 1fr;
+      }
+
+      .test-settings {
+        background-color: #0002;
+
+        padding: 1rem 3rem;
+      }
+
+
+      /* FROM MASTER*/
+      h1 {
+        font-family: 'Limelight', cursive;
+        font-size: 4rem;
+        font-weight: normal;
+
+        margin-top: 0;
+        padding-top: 4rem;
+      }
+
+      h2, h3, button {
+        font-family: 'Federo', sans-serif;
+      }
+
+      h2 {
+        font-size: 3rem;
+
+        margin-top: 5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 0;
+      }
+
+      b {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="app"></div>
+
+    <script src="lib/vue.js"></script>
+    <script src="lib/vuex.js"></script>
+
+    <script src="js/store_v2.js" charset="utf-8"></script>
+    <script src="js/characterprint_v2.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        store,
+        data: {
+          player: {
+            jugador: "Jacob",
+            name: "Alister",
+            familyName: "Clark",
+
+            has: "Vident",
+            wants: "Diners",
+
+            secret: {
+              nom: "Assessi pare",
+              relatedPlayer: 0
+            },
+            knows: [
+              {
+                playerkey: 0,
+                secret: {
+                  nom: "Assessi pare",
+                  relatedPlayer: 0,
+                  relatedBusiness: global_negocis[Math.floor(Math.random() * global_negocis.length)]
+                }
+              }
+            ],
+            carregaments: [
+              ["Test", 3],
+              ["Test 2", 2]
+            ]
+          }
+        },
+        computed: {
+          has_options() {
+            return [...global_base_haves, ...global_unique_haves, ...global_haves_options, "Policia"];
+          },
+          wants_options() {
+            return [...global_base_haves, ...global_haves_options];
+          },
+          secrets_options() {
+            return global_secrets;
+          },
+          knows_options() {
+            return [...global_secrets, ...store.state.priv_info]
+          }
+        },
+        beforeCreate() {
+          store.dispatch("setupTestingplayers");
+        },
+        template: `
+        <div class="test-wrapper">
+          <div class="character-wrapper">
+            <div class="container">
+              <character :player="player" :playerKey="1"></character>
+            </div>
+          </div>
+          <div class="test-settings">
+            <h1>Settings</h1>
+
+            <div class="flex-row">
+              <label for="has">Character: </label>
+              <select name="has" v-model="player.has">
+                <option v-for="opt in has_options" :value="opt">{{ opt }}</option>
+              </select>
+            </div>
+
+            <div class="flex-row">
+              <label for="wants">Goal: </label>
+              <select name="wants" v-model="player.wants">
+                <option v-for="opt in wants_options" :value="opt">{{ opt }}</option>
+              </select>
+            </div>
+
+            <hr />
+
+            <div class="flex-row">
+              <label for="secrets">Secret: </label>
+              <select name="secrets" v-model="player.secret.nom">
+                <option v-for="opt in secrets_options" :value="opt">{{ opt }}</option>
+              </select>
+            </div>
+
+            <div class="flex-row">
+              <label for="secrets">Knows: </label>
+              <select name="secrets" v-model="player.knows[0].secret.nom">
+                <option v-for="opt in knows_options" :value="opt">{{ opt }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        `
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+
+/* Turing CSS */
+/* By Mistrza */
+/* Modified for this project by myself */
+
+.normes-container {
+  font-family: monospace;
+  font-family: 'Special Elite', cursive !important;
+  /*font-weight: bold;*/
+  text-decoration-skip: none;
+  text-align: justify;
+
+  margin-bottom: 5rem;
+}
+
+.normes-container hr {
+  border: none;
+  text-align: center;
+}
+.normes-container hr::after {
+  content: " - - - ";
+}
+
+.normes-container h1, .normes-container h2, .normes-container h3 {
+  font-family: 'Special Elite', cursive !important;
+
+  font-size: 16px !important;
+}
+
+.normes-container h1, .normes-container h2 {
+     text-align: center;
+}
+.normes-container h1 {
+     text-transform: uppercase;
+}
+.normes-container h2, .normes-container h3, em, th, .cm-keyword {
+     text-decoration: underline;
+}
+
+.normes-container h2 {
+  margin-top: 3em;
+}
+
+.normes-container h3 {
+  margin-top: 2em;
+}
+
+.normes-container blockquote, .normes-container strong {
+     color: darkblue
+}
+
+.normes-container blockquote {
+     margin-left: 30px;
+     margin-right: 30px
+}
+.normes-container a, .normes-container .footnote-line {
+     color: #333;
+}
+.normes-container em, .normes-container strong {
+     font-style: normal;
+}
+
+.normes-container ul {
+     list-style-type: square
+}
+
+.normes-container #footer p {
+     border-top: 2px solid #333;
+     margin-top: 10px;
+}
+
+/* Codes */
+.cm-s-inner {
+     border-left: 2px solid #333;
+     padding-left: 1em
+}
+
+.cm-s-inner * {
+     color: #333 !important
+}
+
+/* Numbering */
+.normes-container h1 {
+     counter-reset: h2
+}
+.normes-container h2 {
+     counter-reset: h3
+}
+.normes-container h2:before {
+     counter-increment: h2;
+     content: counter(h2) ". "
+}
+.normes-container h3:before {
+     counter-increment: h3;
+     content: counter(h2) "." counter(h3) ". "
+}
+
+
+
+
+
+/* MINE */
+#normes .container {
+     overflow: initial;
+}
+
+.normes-image-container {
+     float: right;
+     position: relative;
+
+     width: 10rem;
+     height: 12rem;
+
+     z-index: 2;
+}
+
+.normes-image-container img {
+     position: absolute;
+     top: -10rem;
+     left: 0;
+
+     width: 700px;
+
+     z-index: -1;
+
+     pointer-events: none;
+}
+
+.normes-image-container.left {
+     float: left;
+}
+
+.normes-image-container.left img {
+     left: unset;
+     right: 3rem;
+}
+
+
+.normes-image-container + .srclink {
+     position: absolute;
+     left: 0;
+
+     margin-top: 20rem;
+}

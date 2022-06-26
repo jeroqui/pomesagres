@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ca" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="Jacob Ràfols">
+    <meta name="description" content="Un joc de rol social on encarnareu uns mafiosos sense escrupuls mentre disfruteu d'una festa com manen els anys 20.">
+    <meta name="keywords" content="joc de rol, joc social, joc de rol social, pomes agres, poder, joc de la mafia, joc de mafiosos, anys 20, 20s">
+
+    <title>POMES AGRES: Un joc de rol social</title>
+
+
+    <meta property="og:title" content="POMES AGRES: Un joc de rol social">
+    <meta property="og:description" content="Un joc de rol social on encarnareu uns mafiosos sense escrupuls mentre disfruteu d'una festa com manen els anys 20.">
+    <meta property="og:image" content="https://jacob.rafols.cat/pomesagres/thumbnail.png">
+    <meta property="og:url" content="https://jacob.rafols.cat/pomesagres/">
+
+    <meta property="og:site_name" content="Jacob Ràfols">
+
+    <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+    <meta name="vers" content="">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/master.css?v=1.4">
+    <link rel="stylesheet" href="css/normes.css?v=1.3">
+    <link rel="stylesheet" href="css/responsive.css?v=1.7">
+    <link rel="stylesheet" href="css/print.css?v=1.2" media="print">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PQH9ZX3NP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7PQH9ZX3NP');
+    </script>
+    -->
+  </head>
+  <body>
+
+    <section id="intro">
+      <div class="container">
+        <h1 class="title">
+          Pomes agres
+          <span class="machine sticker">versió 2</span>
+        </h1>
+        <h2 class="subtitle">Un joc de rol social</h2>
+
+        <p>
+          Alguns dirien que ho tens tot: atractiu, diners, astúcia... però hi ha alguna cosa més que vols, alguna cosa que aconseguiràs si jugues bé les teves habilitats.
+        </p>
+        <p>
+          Per això has preparat un esdeveniment molt especial, una <i>soirée</i> on convidaràs tots aquells que poden servir els teus interessos. Però vigila; nos fos cas que tu acabessis servint els seus…
+        </p>
+
+        <img src="src/divider.svg" alt="divisor" class="divider">
+        <p>Estàs esperant que els teus amics et responguin els missatges? Entretén-te a llegir les <a href="javascript: scrollto('normes');">normes</a>.</p>
+        <p>Ja t'han respost? I estan engrescats? <a href="javascript: scrollto('generador-personatges');">Genera els personatges</a> i a jugar.</p>
+      </div>
+      <div class="flex-row separate">
+        <span class="srclink phone-hide">src: <a href="https://www.pexels.com/photo/photo-of-man-in-black-suit-smoking-cigarette-7319350/">Photo by cottonbro from Pexels</a></span>
+        <span class="srclink">src: <a href="https://www.pexels.com/photo/a-woman-posing-in-a-twenties-outfit-6640019/">Photo by cottonbro from Pexels</a></span>
+      </div>
+      <div id="intro-color"></div>
+    </section>
+
+    <section id="generador-personatges">
+        <div id="app">
+          <div class="container">
+            <h1>Generador de personatges:</h1>
+            <div style="text-align: center">Carregant...</div>
+          </div>
+        </div>
+    </section>
+
+    <section id="normes">
+      <div style="position: absolute; height: 100%; top: 0; right: 0;">
+        <button type="button" name="button" class="stick-top" onclick="document.getElementById('material').scrollIntoView({ behavior: 'smooth', block: 'start'});"><i class="fas fa-angle-double-down"></i></button>
+        <div style="height: calc(100% - 16rem); pointer-events: none"></div>
+        <button type="button" name="button" class="stick-bottom" onclick="document.getElementById('generador-personatges').scrollIntoView({ behavior: 'smooth', block: 'start'});"><i class="fas fa-angle-double-up"></i></button>
+      </div>
+      
+      <div style="overflow: hidden; border-radius: 4rem;">
+      <div class="container">
+        <h1>Normes</h1>
+
+        <div class="normes-container">
+          <h1 id='pomes-agres'>Pomes agres</h1>
+          <h2 id='les-normes'>Les normes</h2>
+          <p>Les normes d’aquest joc són molt simples:</p>
+          <ol start='' >
+          <li>No mateu a ningú.</li>
+          <li>No hi ha més normes.</li>
+
+          </ol>
+          <h2 id='com-jugar-hi'>Com jugar-hi</h2>
+
+          <div class="normes-image-container left">
+            <img src="src/blueprint.png" alt="">
+          </div>
+          <span class="srclink" style="padding-left: 2rem">src:
+            <a href="https://www.pexels.com/ca-es/foto/creatiu-edifici-construccio-escriptori-4458205/">
+              Foto de Ivan Samkov de Pexels
+            </a>
+          </span>
+
+          <p>Reserveu una nit. Avisa els teus amics i genera els personatges corresponents al generador. Un cop hagis omplert les invitacions, fes-les arribar a cada jugador juntament amb la seva fitxa privada. Cadascú crearà el seu personatge basat en la seva fitxa secreta.</p>
+          <p>El joc es pot desenvolupar allà on vulgueu, però es preveuen alguns espais o zones a la sala de joc:</p>
+          <ul>
+          <li>la zona de bar</li>
+          <li>la zona de menjar (tan formal o informal com us plagui)</li>
+          <li>el lounge</li>
+          <li>la zona de joc (pòquer, cartes, daus…)</li>
+          <li>l’exterior…</li>
+
+          </ul>
+          <p>La nit de la trobada, muda't i converteix-te en el personatge que has dissenyat. Durant la nit, intenteu descobrir quins secrets amaguen la resta de convidats, sense descobrir-ne els propis.</p>
+          
+          
+          
+          <h2 id='personatges'>Personatges</h2>
+
+          <div class="normes-image-container">
+            <img src="src/mafia_survilance.png" alt="">
+          </div>
+
+          <p>El que defineix un personatge no és el seu nom, ni la seva aparença, són els seus <strong>actius</strong> i el que <strong>desitgen</strong>.</p>
+          <p>El que un personatge pot tenir com a actiu és molt divers, però el que fa que aquest joc sigui interessant és que tot allò que algú té, algú altre ho dessitja, i ningú té allò que vol.</p>
+          <h3 id='elements-de-negociació'>Elements de negociació</h3>
+          <p>Quins poden èsser, doncs, els vostres <strong>actius</strong>? (El teu actiu serà el <strong>desig</strong> d'algú altre).</p>
+          <ul>
+          <li>Diners</li>
+          <li>Un diamant valuosíssim</li>
+          <li>Drogues</li>
+          <li>Armament</li>
+          <li>Estatus (s’aconsegueix ajudant algú important)</li>
+
+          </ul>
+          <p>A més, un parell d'assistents a la vetllada tindran informació privilegiada:</p>
+          <ul>
+          <li>The bartender	-	Sap o bé quin és l'actiu o bé quin és el desig de l’amfitrió.</li>
+          <li>Vident(a)    -	Sap els <strong>secrets</strong> de la meitat dels convidats.</li>
+
+          </ul>
+          <p>Tothom estarà sobre avís del tipus d'informació que coneixen aquests personatges.</p>
+          <h3 id='secrets'>Secrets</h3>
+
+
+          <div class="normes-image-container left">
+            <img src="src/secrets.png" alt="" style="top: 0">
+          </div>
+          <span class="srclink" style="padding-left: 2rem; margin-top: 60rem;">
+            <a href="http://www.blendswap.com/blends/view/75707" style="display: block;">
+              model by: Eprdox
+            </a>
+            <a href="https://blendswap.com/blend/29115">
+              model by: sinabyt74
+            </a>
+          </span>
+
+          <p>
+            Tothom té secrets. Fins i tot aquells que aparentment no farien mal ni a una
+            mosca, amaguen esdeveniments terribles del seu passat. La vida seria molt més senzilla si poguéssim sincerar-nos els uns amb
+            els altres, admetre obertament què necessitem, què
+            volem… i què podem oferir. Però no és així, mai és així. I no val la pena fingir-ho.
+          </p>
+          <p>Sigues molt prudent amb les males decisions del teu passat: els altres no seran compassius.</p>
+          <p>Tot i la teva prudència, sempre hi ha algú que no sap quan callar. Quan arribis a la festa, ja hi haurà algú que coneixerà el teu secret. Mira que això no et passi masses factures.</p>
+          <hr />
+          <p>Secrets que generen enemics:</p>
+          <ul>
+          <li>Ets responsable de la mort dels pares d’un dels altres convidats. Et converteixes en el seu <strong>enemic</strong>.</li>
+          <li>Odies l’amfitrió, tu saps molt bé perquè. Es converteix en el teu <strong>enemic</strong>.</li>
+          <li>Tens tota la intenció de robar l'amfitrió. Et converteixes en el seu <strong>enemic</strong>. (<strong>+1 punt</strong> si el robes)</li>
+          <li>Un familiar d'un dels convidats t’ha fet la vida impossible. Es converteix en el teu <strong>enemic</strong>.</li>
+          <li>Has robat divuit bancs. La policia és el teu <strong>enemic</strong>.</li>
+
+          </ul>
+          <p>Secrets perillosos: <strong>1 punt</strong> al policia si ho descobreix, <strong>-2 punts</strong> per a tu si el policia ho descobreix.</p>
+          <ul>
+          <li>Estafar és el teu ofici. (<strong>+1 punt</strong> si estafes algú)</li>
+          <li>Ets addicte, necessites droga. (<strong>+1 punt</strong> si compres drogues)</li>
+
+          </ul>
+          <ul>
+          <li>Ets <strong>policia</strong>.</li>
+          </ul>
+          <hr />
+
+          <h3 id='policia'>Policia</h3>
+          <div class="normes-image-container">
+
+            <img src="src/portrait_police.png" alt="un policia inflitrat" style="width: 20rem; padding: 1rem; top: 0">
+          </div>
+
+          <blockquote><p>“No importa quines sigui la mentida que expliquis, però ningú pot saber que ets policia. Ningú. En aquesta festa tothom és un criminal i la teva supervivència depèn de la teva habilitat per actuar com un criminal més.”</p>
+          </blockquote>
+          <p>La seva missió, però, és simple: descobrir els actius de cadascú, amb proves que l’incriminin.</p>
+          <blockquote><p>“Ara bé, possiblement mentiran. I vigila que els actius no canviïn de mans: si ho fan, millor que ho sapigues.”</p>
+          </blockquote>
+          <p>Ser policia pot ser molt profitós, és fàcil guanyar punts:</p>
+          <ul>
+          <li><p>Per cada actiu detectat correctament:, <strong>+1 punt</strong>.</p>
+          <ul>
+          <li>Atenció, només fets il·legals: armament, drogues i el diamant robat.</li>
+          <li>Tenir diners, estatus o informació no és delicte i <strong>no dona punts</strong>.</li>
+
+          </ul>
+          </li>
+          <li><p>Per cada transacció que hagis detectat correctament <strong>+1 punt</strong>.</p>
+          <li><p>Per cada error en les teves deduccions <strong>-3 punts</strong>.</p>
+          </li>
+          <li><p>Si algú mor i saps qui és el culpable: <strong>+3 punts</strong>; el/la culpable perd <strong>-6 punts</strong>. </li>
+          <ul>
+          <li>Si no pots identificar el culpable <strong>-2 punts</strong>. Si t'equivoques quan assenyales l'assassí <strong>-6 punts</strong>.</li>
+          </ul>
+          </li>
+          </li>
+
+          </ul>
+          <blockquote><p>“Evidentment, si incrimines algú sense fonaments, això debilitara molt la teva situació.”</p>
+          </blockquote>
+          <p>Com a policia, lamentablement no tens res a oferir, i si et descobreixen el més probable és que no passis d'aquesta nit.</p>
+          <h3 id='lamfitrió'>L’amfitrió</h3>
+
+          <div class="normes-image-container">
+            <img src="src/invitacions.png" alt="" style="left: 4rem">
+          </div>
+
+          <p>L'amfitrió té un paper destacat. Motivat pel seu desig (i qui sap si per alguna cosa més), ha organitzat la trobada.</p>
+          <p>Quan l'amfitrió envia les seves invitacions, ha de donar a cada jugador una mica de context: pistes sobre quina relació teniu, quin és el vostre lligam, de què us coneixeu…</p>
+          <p>Aquest personatge el pot jugar qui organitza el joc, o qualsevol altre, però és important que conegui l’espai i se’l pugui fer seu.</p>
+          <p>Alguns punts importants a l’hora de redactar les invitacions són els següents:</p>
+          <ol start='' >
+          <li>Alguna nota que dóni pistes de la vostra relació prèvia</li>
+          <li>El motiu públic de la invitació</li>
+
+          </ol>
+          <p>Encara que pugui ser temptador, no desvetllis el veritable motiu de la trobada. Qui sap si, en realitat, el teu convidat serà un infiltrat o si, de fet, és la competència. Potser és només una invitació de conveniència...</p>
+          <h2 id='negociar'>Negociar</h2>
+
+          <div class="normes-image-container left">
+            <img src="src/news.png" alt="" style="top: -9rem; transform: rotate(-30deg);">
+          </div>
+
+          <p>Recorda: no hi ha normes. Per a aconseguir els teus objectius pots mentir, prometre pagaments que no podràs fer, incriminar d'altres, parar-los trampes... tot s’hi val.</p>
+          <p><strong>No hi ha normes</strong>. Això sí, procura que no t'enxampin: un cop perduda la confiança ets carn de canó.</p>
+          <h3 id='improvisar'>Improvisar</h3>
+          <p>Aquesta és la mecànica més important: improvisar. Tot allò que no hagis pensat, improvisa. I recorda la norma més important de la improvisació: <strong>sempre digues “sí, però…”</strong>.</p>
+          <p>No contradiguis el que diuen els altres, i no diguis que sí a tot (dificultaries el paper de l’altre). Digues “― <strong>sí</strong>, és veritat, vaig robar un diamant fa 5 anys<strong>, però</strong> a la meva pròpia família, per venjar-me dels qui em van entregar a la policia, per salvar el cul.”</p>
+          <p>O simplement: “― Com ho saps?”</p>
+          <h3 id='moneda-de-canvi'>Moneda de canvi</h3>
+          <p>Tothom té alguns diners, amb els que pots pagar la beguda, jugar poker, apostar…</p>
+          <p>Els personatges comencen amb:</p>
+          <ul>
+          <li><strong>100 fitxes</strong> de base.</li>
+          <li><strong>+200 fitxes</strong> si el teu actiu és tenir “Diners”.
+            <ul>
+              <li><strong>+100 fitxes</strong> si ets el Bartender</li>
+            </ul>
+          </li>
+
+          <li><strong>+5 carregaments</strong> d’armes si el teu actiu són “Armes”.</li>
+          <li><strong>+5 carregaments</strong> de drogues variades si el teu actiu són “Drogues”.</li>
+          <li><strong>+1 diamant</strong> si el teu actiu és un “Diamant robat”.</li>
+          <li>També pots tenir <strong>estatus</strong>.</li>
+
+          </ul>
+          <p>Per a aconseguir el seu objectiu necessites:</p>
+          <ul>
+          <li>Diners: <strong>&gt; 20 fitxes</strong>.</li>
+          <li>Armes o Drogues: <strong>&gt; 4 carregaments</strong>.</li>
+          <li>Diamant robat: <strong>1 diamant</strong>.</li>
+          <li>O que algú amb <strong>estatus</strong> et doni les gràcies al final de la partida si el que busques és reconeixement.</li>
+          </ul>
+          <h2 id='acabar-el-joc'>Acabar el joc</h2>
+          <p>Molt bé, i quan s’acaba el joc?</p>
+          <p>Només hi ha dos esdeveniments que puguin provocar el final del joc.</p>
+          <ol start='' >
+          <li>Que acabi la festa i tothom torni a casa.</li>
+          <li>Un assassinat.</li>
+
+          </ol>
+          <h3 id='matar'>Matar</h3>
+
+          <div class="normes-image-container">
+            <img src="src/matar_survilance.png" alt="" style="top: -16rem; left: 4rem">
+          </div>
+
+          <p>Per matar algú, només cal que ho fassis saber a la víctima. Un apunyalament, un tret, verí. La mort de la teva elecció. Ara bé, com menys evident sigui per la resta de convidats, millor.</p>
+          <p>Qui mor no podrà puntuar, ni positiva ni negativament. Quedarà a <strong>0 punts</strong>. Per tant, procura no fer massa evident el teu domini del joc o estaràs en el punt de mira.</p>
+          <hr />
+          <p>La mort d'un personatge significa el trencament de les normes, i per tant, ja no és pot continuar jugant. El joc acabará per a tothom. En <strong>10 minuts</strong> arribarà la policia, sempre hi ha algun veí tafaner que els avisa.</p>
+          <p>Això vol dir que la resta només teniu 10 minuts per acabar de tancar els pactes i amagar proves.</p>
+          <p>Passats aquests 10 minuts, es comptaran els punts.</p>
+          <h3 id='puntuació'>Puntuació</h3>
+          <p>Excepte el policia, tots els jugadors puntuen de la manera següent:</p>
+          <ul>
+          <li>Si has aconseguit el teu desig: <strong>+3 punts</strong>.</li>
+          <li>Si has ajudat algú altre a aconseguir el seu desig: <strong>+1 punt</strong>.</li>
+          </ul>
+          <hr />
+          <p>Els criteris següents apliquen a tothom, incloent el policia:</p>
+          <ul>
+          <li><p>Si el teu <strong>enemic</strong> ha aconseguit el seu objectiu principal: <strong>-2 punts</strong>.</p>
+          <ul>
+          <li>Si has impedit directament que ho aconsegueixi: <strong>+1 punt</strong>.</li>
+          <li>Si el teu enemic ha mort: <strong>+2 punts</strong>.</li>
+          </ul>
+          </li>
+          <li><p>Al final, afegireu:</p>
+          <ul>
+          <li><strong>+1 punt</strong> per cada <strong>10 fitxes</strong> (Si el teu objectiu era aconseguir diners, tot allò que superi les 20 fitxes).</li>
+          </ul>
+          </li>
+          </ul>
+          <hr />
+          <p>Mentre jugueu, no hi penseu massa, en els punts. La puntuació reflectirà el valor d'allò important per al vostre personatge.</p>
+          <p>Centreu-vos en aconseguir el vostre objectiu, enlloc de pensar en els punts. Submergiu-vos en el vostre personatge i així guanyareu.</p>
+          <ul>
+            <li>Aconseguir diners també serà beneficiós. Vigila com els fas servir.</li>
+            <li>Fes servir amb prudència el teu secret: encara que no perdis punts directament per desvetllar-lo, serà una basa molt important.</li>
+          </ul>
+          <p><strong>Manipuleu la resta</strong>.</p>
+
+          <div class="normes-image-container left" style="width: 0">
+            <img src="src/drink.png" alt="" style="top: -16rem; right: -8rem">
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    </section>
+
+    <section id="material">
+      <div class="container">
+        <h1>Material</h1>
+        <p>
+          A part d'imprimir les fitxes dels personatges i les invitacions, per a poder jugar necessitareu alguns materials:
+        </p>
+
+        <div class="flex-row material phone-reverse">
+          <img src="src/poker-chip_nosh.png" alt="Poker chips" width="80%">
+          <div>
+            <h2>Les <strong>fitxes</strong></h2>
+            <p>
+              Per a representar els diners pots fer servir bitllets d'un joc com el Monopoli, fitxes de poquer o els <a href="src/materials/cheks-test1.pdf">checs de l'Associació Bancaria Don Vignolo</a>  que pots intercanviar a la banca (operada per l'amfitrió o el Bartender) per fitxes per fer pagaments més petits a altres jugadors o apostar als jocs de cartes.
+            </p>
+            <p>
+              Imprimeix el pdf (amb tantes copies com calgui), retalla els checs i posa-l's en un sobre amb la fitxa de personatge.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex-row material">
+          <div>
+            <h2>Els <strong>carregaments</strong></h2>
+            <p>
+              Per a representar els carregaments de productes il·legals podreu imprimir una serie de targetes de "visita". Contenen una adreça on s'enmagatzemen
+              aquests bens. El document imprimible el pots trobar <a href="#">aquí</a>.
+            </p>
+            <p>
+              I si se t'acut alguna altra forma de representar els carregaments, no dubtis en fer-me la arribar.
+            </p>
+          </div>
+          <img src="src/cards.png" alt="Targetes de contacte" width="90%">
+        </div>
+
+        <div class="flex-row material phone-reverse">
+          <img src="src/diamond.png" alt="Poker chips" width="80%">
+          <div>
+            <h2>El <strong>diamant</strong></h2>
+            <p>
+              Per a fer de diamant podeu utilitzar qualsevol xapa que tingueu a mà, o comprar uns diamants de plastic com vaig fer jo als 14 anys. Els he fet servir moltes més vegades no em pensava.
+            </p>
+          </div>
+        </div>
+
+        <div id="recompte-material">
+          Carregant el recompte de material necessari...
+        </div>
+      </div>
+      <div style="text-align: right; padding-right: 2rem">
+        <span class="srclink">src: <a href="https://www.pexels.com/photo/photo-of-vintage-stationery-776632/">Photo by Ylanite Koppens from Pexels</a></span> <br>
+        <span class="srclink">src: <a href="https://www.pexels.com/photo/brown-paper-envelope-on-table-211290/">Photo by John-Mark Smith from Pexels</a></span>
+      </div>
+    </section>
+
+    <section id="idees">
+      <div class="container">
+        <h1>Idees</h1>
+        <p>
+          Podries incloure un <strong>llibre de visites</strong>, perquè els jugadors hi deixin alguna nota, per incloure pistes o elements que ajudin a desenvolupar parts del joc.
+        </p>
+        <hr>
+        <p>
+          Si imagineu més elements, podeu fer-me arribar les vostres idees a qualsevol de les meves xarxes:
+        </p>
+
+        <a href="https://instagram.com/jacobrmmr" class="social">
+          <span><i class="fa-brands fa-instagram"></i></span>
+          <span>@jacobrmmr</span>
+        </a>
+        <a href="https://twitter.com/jacobrafols" class="social">
+          <span><i class="fa-brands fa-twitter"></i></span>
+          <span>@jacobrafols</span>
+        </a>
+      </div>
+
+      <div class="separate">
+        <span class="srclink" style="padding-left: 2rem">src:
+          <a href="https://www.pexels.com/ca-es/foto/gent-adiccio-aposta-casino-6664178/">
+            Foto de Anna Shvets de Pexels
+          </a>
+        </span>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container">
+
+        <h2 style="margin-bottom: 0">
+          Un joc de <a href="/">Jacob Ràfols Morilla</a>,
+        </h2>
+        <h3>Montse Morilla Gil</h3>
+        <hr>
+        <p style="text-align: left;"><i>Betatesters:</i></p>
+        <div class="contribuidors">
+          <span>Aicard Ventura</span>
+          <span>Anna Salvador</span>
+          <span>Clara Catasus</span>
+          <span>Daniel Sanford</span>
+          <span>David Silvestre</span>
+          <span>Jon Garcia</span>
+          <span>Laia Soto</span>
+          <span>Luke Hayden</span>
+          <span>Manel Ballart</span>
+          <span>Marc Vives</span>
+          <span>Nayra Silvestre</span>
+          <span>Ona Molner</span>
+          <span>Tristan Vignolo</span>
+        </div>
+        <hr>
+        <p class="machine">Des de: 14 - 1 - 2022</p>
+      </div>
+    </footer>
+
+
+    <script src="lib/vue.js"></script>
+    <script src="lib/vuex.js"></script>
+
+    <!-- CDNJS :: Sortable (https://cdnjs.com/) -->
+    <script src="//cdn.jsdelivr.net/npm/sortablejs@1.8.4/Sortable.min.js"></script>
+    <!-- CDNJS :: Vue.Draggable (https://cdnjs.com/) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.20.0/vuedraggable.umd.min.js"></script>
+
+    <script src="js/store_v2.js" charset="utf-8"></script>
+    <script src="js/characterprint_v2.js" charset="utf-8"></script>
+    <script src="js/app_v2.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      function scrollto (id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start'});
+      }
+    </script>
+  </body>
+</html>

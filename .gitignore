@@ -1,0 +1,10 @@
+src/materials
+tests/
+
+*.kra
+*.kra~
+*-autosave.kra
+*.png~
+
+
+byron.zip

@@ -1,0 +1,124 @@
+@media only screen and (max-width: 900px) {
+  #invitacions {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "card card"
+      "button1 button2";
+    margin-bottom: 3rem;
+  }
+
+  #invitacions-slides {
+    grid-area: card;
+
+    min-width: auto;
+  }
+
+  #invitacions button {
+    grid-area: button1;
+  }
+
+  #invitacions button:last-of-type {
+    grid-area: button2;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .material {
+    flex-direction: column;
+  }
+
+  .material h2 {
+    margin-top: 3rem;
+  }
+
+  .material.phone-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .material:first-of-type img {
+    width: 60%;
+  }
+
+  #intro {
+    border-radius: 0;
+  }
+
+  .playerinput {
+    display: grid;
+    grid-template-areas: "handle first first second second delete"
+      ". last last last last .";
+
+    padding: .5rem;
+
+    border-radius: 2rem;
+  }
+
+  .playerinput input {
+    margin: 0;
+    padding: 0;
+  }
+
+  .playerinput input:last-of-type {
+    grid-area: last;
+  }
+
+  .playerinput .together {
+    width: 100%;
+  }
+
+  .playerinput .together:first-of-type {
+    grid-area: first;
+  }
+
+  .playerinput .together {
+    grid-area: second;
+  }
+
+  .playerinput :first-child {
+    grid-area: handle;
+  }
+
+  .playerinput :last-child {
+    grid-area: delete;
+  }
+
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buttons span {
+    margin: 1rem;
+  }
+
+  #idees {
+    background-size: cover;
+  }
+
+  .normes-image-container, .normes-image-container + .srclink {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1, h2, h3, h4, h5 {
+    font-size: 2rem;
+  }
+
+  #intro, #intro-color {
+    background-position-x: -50%;
+  }
+
+  .phone-hide {
+    display: none;
+  }
+
+  .social {
+    width: 100%;
+  }
+
+  .sticker {
+    transform: translateX(-6rem) translateY(-4rem) rotate(10deg);
+  }
+}

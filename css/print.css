@@ -1,0 +1,164 @@
+body > * {
+  display: none !important;
+}
+
+#generador-personatges {
+  display: block !important;
+  font-family: 'Special Elite', cursive !important;
+
+  margin: 0 !important;
+}
+
+.print-info {
+  display: none;
+}
+
+.character {
+  position: relative;
+  page-break-after: always;
+  overflow: hidden;
+}
+
+.has_wrapper, .wants_wrapper, .secret_wrapper, .priv_info_wrapper {
+  page-break-inside: avoid;
+}
+
+.print-info {
+  page-break-before: always;
+}
+
+hr {
+  border: 1px solid grey !important;
+}
+
+.gradient {
+  display: none;
+}
+
+#invitacions {
+  display: block;
+}
+
+#invitacions > * {
+  display: none;
+}
+
+#invitacions-slides {
+  display: block;
+}
+
+.card-wrapper {
+  break-inside: avoid;
+}
+
+.invitacio {
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.invitacio .convidatName::before {
+  height: 0;
+  border-top: 2px solid #333;
+}
+
+.invitacio select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+
+
+.container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  min-width: unset;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.priv_info_wrapper table {
+  margin-top: 1rem;
+}
+
+td {
+  padding: .4rem 1rem;
+  vertical-align: top;
+}
+
+.point_grid {
+  display: inline-grid;
+  grid-auto-flow: column;
+}
+
+.point_grid > .point_cell {
+  display: flex;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid black;
+
+  padding-top: .2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.point_grid > .point_cell:not(:nth-child(5n + 1)) {
+  border-left: 0;
+}
+
+.point_grid > .point_cell:nth-child(5n + 1) {
+  grid-column: 1;
+}
+
+.point_grid > .point_cell.points_bad {
+  border-color: red;
+}
+
+.recompte_punts li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recompte_punts li > span:last-of-type {
+  text-align: right;
+}
+
+.priv_info_wrapper td:nth-child(-n+2) {
+  min-width: 30pt;
+  text-align: right;
+
+  border-right: 1px solid black !important;
+  border-right-width: 1px !important;
+}
+
+.priv_info_wrapper td:first-child {
+  min-width: 10pt;
+}
+
+.character-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.character-row > div:first-child {
+  border-right: 1px solid black;
+}
+
+.character-row ul {
+  list-style: square;
+}
+
+.character img.portrait {
+  position: absolute; top: 0; right: 0;
+  
+  width: 10rem;
+
+  z-index: -1;
+}
