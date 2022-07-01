@@ -158,7 +158,9 @@ td {
 .character img.portrait {
   position: absolute; top: 0; right: 0;
   
-  width: 10rem;
+  width: 60%;
 
   z-index: -1;
+
+  opacity: 0.3;
 }

@@ -153,7 +153,14 @@ Vue.component('character-has', {
   },
   template: `
   <div class="has_wrapper">
-    <img src="src/portrait_police.png" alt="" class="portrait"/>
+    <img v-if="has === 'Armament'" src="src/sheet-decorations/armament.svg" alt="" class="portrait"/>
+    <img v-if="has === 'Drogues'" src="src/sheet-decorations/drogues.svg" alt="" class="portrait"/>
+    <img v-if="has === 'Estatus'" src="src/sheet-decorations/estatus.svg" alt="" class="portrait"/>
+    <img v-if="has === 'Diners'" src="src/sheet-decorations/diners.svg" alt="" class="portrait"/>
+    <img v-if="has === 'Diamant robat'" src="src/sheet-decorations/lladre.svg" alt="" class="portrait"/>
+    <img v-if="has === 'Bartender'" src="src/sheet-decorations/bartender.svg" alt="" class="portrait"/>
+    <img v-if="has === 'Vident'" src="src/sheet-decorations/vident.svg" alt="" class="portrait"/>
+
     <h3>Personatge: {{ get_character_name }}</h3>
     <div class="character-row">
       <div>
