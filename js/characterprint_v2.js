@@ -12,7 +12,7 @@ Vue.component('character-has', {
     get_character_name () {
       switch (this.has) {
         case "Diners":
-          return "Persona adinerada";
+          return "Fastigosament ric";
         case "Armament":
           return "Traficant d'armes";
         case "Drogues":
@@ -20,7 +20,7 @@ Vue.component('character-has', {
         case "Diamant robat":
           return "Lladre";
         case "Estatus":
-          return "Estrella";
+          return "Cèlebre";
         default:
           return this.has;
       }
@@ -32,18 +32,15 @@ Vue.component('character-has', {
         case "Vident":
           base += `
           <p>
-            Ets vident. Una persona capaç de veure més enllà de l'ànima
-            de les persones. Però no massa. El teu fort és la investigació:
-            t'assabentes dels secrets dels altres, cosa que és molt útil
-            per fer creure tothom en els teus poders sobrenaturals.
+            Ets vident. Una persona capaç de veure més enllà de l'ànima de les persones; els esperits parlen amb tu i et desvetllen tots els secrets al teu voltant... O no? De fet, no. El teu fort és la investigació: t'assabentes dels secrets dels altres, cosa que és molt útil per fer creure tothom en els teus poders sobrenaturals.
           </p>`;
           break;
         case "Bartender":
           base += `
           <p>
-            Ets bartender. Una persona sociable i atenta i que sap detectar les
-            debilitats de la gent. Per alguns es el beure, per a d'altres
-            algunes substancies misterioses, però en el cas de l'amfitrió
+            Ets bartender. Una persona sociable, atenta... i que sap detectar les
+            debilitats de la gent. Per a alguns és la beguda, per a d'altres,
+            algunes substancies misterioses... però en el cas de l'amfitrió
             saps `
           if (this.bartender_info > 0.5) {
             base += `el que més desitja és tenir.`;
@@ -56,31 +53,26 @@ Vue.component('character-has', {
           base += `
           <p>
             Ets el lladre més célebre de la història. Has robat <b>el
-            diamant més gran</b> mai registrat a Europa.
+            diamant més gran</b> mai catalogat a Europa.
           </p>
           <p>
-            La llàstima és que ara tens la policia als talons. Millor que trobis a qui incriminar...
-            però no sense rendibilitzar la feina, és clar. Si parles així del cavall,
-            no el vendràs mai.
+            La llàstima és que ara la policia et trepitja els talons. Millor que trobis a qui incriminar... però no sense rendibilitzar la feina, és clar.
           </p>`;
           break;
         case "Diners":
           base += `
           <p>
             Ets una persona desorbitadament rica. Com has aconseguit la teva
-            fortuna? Això no incumbeix ningú. Si saps mantenir la cara de pòquer, potser les puguis intercanviar
-            per el que realment t'interessa.
+            fortuna? Això no incumbeix ningú. Si saps mantenir la cara de pòquer, potser puguis intercanviar tota aquesta pasta pel que realment t'interessa.
           </p>`;
           break;
         case "Armament":
           base += `
           <p>
-            Armes, això és el que tens. Un fotimer d'armes. Però no hi ha
-            prou persones al món per a tantes bales. I ara, què?
+            Armes, això és el que tens. Un fotimer d'armes. Però no hi ha prou persones al món per a tantes bales. I ara, què?
           </p>
           <p>
-            Millor que trobis algú a quí vendre-les. Comences amb
-            <b>5 carregaments d'armes</b> en excès, que pots vendre sense
+            Millor que trobis algú a quí vendre-les. Comences amb <b>5 carregaments d'armes</b> en excès, que pots vendre sense
             perdre el teu monopoli.
           </p>`;
           break;
@@ -93,35 +85,26 @@ Vue.component('character-has', {
             I ara, què?
           </p>
           <p>
-            Millor que trobis distribuidors. Comences amb
-            <b>5 carregaments de drogues</b> en excès, que pots vendre sense
-            perdre el teu monopoli. Quines? Les que vulguis. Les tens totes!
+            Millor que trobis distribuïdors. Comences amb <b>5 carregaments de drogues</b> en excès, que pots vendre sense perdre el teu monopoli. Quines? Les que vulguis. Les tens totes!
           </p>`;
           break;
         case "Estatus":
           base += `<p>
             No tens molts diners, ni armes, ni elements de negociació. Però no passa
-            res, ets la persona més coneguda de tota la festa. Et coneix i
-            t'admira tothom. Tens <b>estatus</b> Què feies?... Cantar? Actuar? Ah! No?... Polític?
+            res, ets la persona més coneguda de tota la festa. Et coneix i t'admira tothom. Tens <b>estatus</b> Què feies?... Cantar? Actuar? No?... Polític?
           </p>
           <p>
-            Es nota en la manera de caminar, en la teva forma de moure't. Tenia raò, oi? Veus!? No tens massa bens
-            materials, però tens les històries més bojes i interessants.
-            I tens contactes, oi? I segur que una paraula teva pot obrir moltes portes.
-            Segur que trobaras algú que estigui desesperat
-            per ajudar-te. És el que té la fama.
+            Es nota en la manera de caminar, en la teva forma de moure't; tens les històries més bojes i interessants... i tens contactes, oi? I segur que una paraula teva pot obrir moltes portes. Segur que trobaras algú que estigui desesperat per ajudar-te. És el que té la fama.
           </p>`;
           break;
         case "Policia":
           base += `
           <p>
-            Ets policia. Exacte: l'encarregat d'arruinar la festa. Però
-            això no vol dir que no puguis gaudir-la mentre dura.
+            Ets policia. Exacte: l'encarregat d'arruïnar la festa. Però això no vol dir que no puguis gaudir-la mentre dura.
           </p>
           <p>
             El teu problema és que <b>no tens res</b> ni per oferir ni per vendre.
-            Hauràs de passar tota la nit intentant que ningú se n'adoni d'aquest
-            petit detall.
+            Hauràs de passar tota la nit intentant que ningú se n'adoni d'aquest petit detall.
           </p>`;
           break;
         default:
@@ -313,44 +296,57 @@ Vue.component('character-secret', {
 
       switch (this.secret.nom) {
         case "Assessi pare":
-          base += `Vas matar el pare o mare d’un dels altres convidats, el senyor o la senyora ` + this.$store.state.players[
+          let random = Math.random();
+          base += `Vas matar `
+          if (random > 0.5) {
+            base += "el pare "
+          }else {
+            base += "la mare "
+          }
+          base += `d’un dels altres convidats, `;
+          if (random > 0.5) {
+            base += "el Sr. "
+          }else {
+            base += "la Sra. "
+          }
+          base += this.$store.state.players[
               this.secret.relatedPlayer
-            ].familyName + `. Et converteixes en l'<b>enemic/ga</b> del seu fill.`;
+            ].familyName + `. Des d'aleshores ets l'<b>enemic</b> del seu fill.`;
           break;
         case "Odi amfitrió":
-          base += `Odies l’amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + `. Es converteix en el teu <b>enemic</b>.`;
+          base += `Odies l’amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + `. És el teu <b>enemic</b> irreconciliable.`;
           break;
         case "Robar amfitrió":
-          base += `Penses robar a l'amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + `. Et converteixes en el seu <b>enemic</b>. (<b>-1 punt</b> si no aconsegueixes robar-li res).  <div class="point_grid"><div class="point_cell points_bad">-1</div></div>`;
+          base += `Penses robar a l'amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + `. Això et converteix en el seu <b>enemic</b>. (<b>-1 punt</b> si no aconsegueixes robar-li res).  <div class="point_grid"><div class="point_cell points_bad">-1</div></div>`;
           break;
         case "Clan familiar":
-          base += `La familia ` + this.$store.state.players[this.secret.relatedPlayer].familyName + ` t’ha fet la vida impossible. Qualsevol amb aquest cognom es converteix en el teu <b>enemic</b>.`;
+          base += `La familia ` + this.$store.state.players[this.secret.relatedPlayer].familyName + ` t’ha fet la vida impossible. A aquesta gent, ni aigua. Són els teus <b>enemics</b>.`;
           break;
         case "Estafador":
-          base += `Tu estafes, és el que fas. (<b>-1 punt</b> si no estafes algú durant la partida). Potser has comprat una cosa i no l'has pagada, potser has venut informació falsa... <div class="point_grid"><div class="point_cell points_bad">-1</div></div>`;
+          base += `La mentida és un art per a tu, la falsedat, la teva arma. (<b>-1 punt</b> si no estafes algú durant la partida). Potser has comprat una cosa i no l'has pagada, potser has venut informació falsa... <div class="point_grid"><div class="point_cell points_bad">-1</div></div>`;
           break;
         case "Rob Banks":
-          base += `Has robat divuit bancs. L'última vegada un policia et va disparar a la
-            cama i van estar apunt d'enxampar-te. Detestes la policia, són els teus <b>enemics</b>.`;
+          base += `Has robat divuit bancs. La darrera vegada un policia et va disparar a la
+            cama i van estar apunt d'enxampar-te. Naturalment, detestes la policia, són els teus <b>enemics</b>.`;
           break;
         case "Addicte":
-          base += `Ets un addicte. (<b>-1 punt</b> si no aconsegueixes com a mínim un carregament de drogues) <div class="point_grid"><div class="point_cell points_bad">-1</div></div>`;
+          base += `Quantes hores fa que no consumeixes? (<b>-1 punt</b> si no aconsegueixes com a mínim un carregament de drogues) <div class="point_grid"><div class="point_cell points_bad">-1</div></div>`;
           break;
         case "Policia":
-          base += `Per si no quedava clar, el teu secret és que ets <b>policia</b>. Seria un problema si algú se n'asabantes. I creus que ja hi ha algú que ho sap. De moment el millor es negar tota acusació.`;
+          base += `Un <b>policia</b> directe a la gola del llop. Seria un problema si algú se n'asabantés... i, malauradament, algú té sospites ben fonamentades. De moment el millor serà buscar una bona identitat falsa i negar tota acusació.`;
           break;
         case "Segall":
-          base += `Per escapar de la policia et vas veure obligat a delatar a ` + this.$store.state.players[this.secret.relatedPlayer].name + `. Mai es va assebentar que vas ser tu qui el va traicionar, però per culpa teva va passar moltes hores a la presó. Et converteixes en el <strong>seu enemic</strong>.`;
+          base += `Per escapar de la policia et vas veure obligat a delatar a ` + this.$store.state.players[this.secret.relatedPlayer].name + `, que mai va saber qui l'havia traït. Malauradament, amb una vida trencada per la presó, mai et perdonarà si ho descobreix. Seràs el <strong>seu enemic</strong>.`;
           break;
         case "Amant":
-          base += `Ja fa uns anys, vas ser l'amant de la parella de ` + this.$store.state.players[this.secret.relatedPlayer].familyName + `. Ell/a encara no ho sap, però no li farà cap gràcia. Et converteixes en el <strong>seu enemic</strong>.`;
+          base += `Ja fa uns anys, vas ser l'amant de la parella de ` + this.$store.state.players[this.secret.relatedPlayer].familyName + `. Per sort, encara no ho sap, però no li farà cap gràcia i si se n'asebenta, seràs el <strong>seu enemic</strong>.`;
           break;
         case "Odi Negoci":
-          base += `Odies el propietari/a del negoci ` + this.secret.relatedBusiness + `. Vols tenir el control dels seus carregaments per assegurar-te que ningú els reculli abans
+          base += `Odies el propietari/a de ` + this.secret.relatedBusiness + `. Vols tenir el control dels seus carregaments i assegurar-te que ningú els reculli abans
             que la policia rebi la teva denuncia anònima. (<b>-1 punt</b> si no controles una de les seves mercaderies). <div class="point_grid"><div class="point_cell points_bad">-1</div></div>`;
           break;
         case "En busca":
-          base += `Estàs en cerca i captura. Si la policia ha descobert qui ets, perds <b>-3 punt</b> (+1 punt per al policia). <div class="point_grid"><div class="point_cell points_bad">-3</div></div>`;
+          base += `Estàs en cerca i captura. Si la policia descobrís qui ets, perdries la teva llibertat, i <b>-3 punt</b> (+1 punt per al policia). <div class="point_grid"><div class="point_cell points_bad">-3</div></div>`;
           break;
         default:
           base += `<div class="error">[[error]] - ` + this.secret.nom + `</div>`;
@@ -403,7 +399,7 @@ Vue.component('privinfo', {
       if (random > 0.4){
         base += `Saps que `;
       } else if (random > 0.7){
-        base += `Recordes que `;
+        base += `Et consta que `;
       } else {
         base += `Has descobert que `;
       }
@@ -416,23 +412,31 @@ Vue.component('privinfo', {
 
       switch (this.knows[i].secret.nom) {
         case "Assessi pare":
-          base += ` va matar al senyor o la senyora ` + this.$store.state.players[this.knows[i].secret.relatedPlayer].familyName + `. El seu fill/a no ho sap, però potser juga al teu favor si utilitzes correctament la informació.`;
+          random = Math.random();
+          base += ` va matar `;
+          if (random > 0.5) {
+            base += "el Sr. "
+          }else {
+            base += "la Sra. "
+          }
+          base += this.$store.state.players[this.knows[i].secret.relatedPlayer].familyName + `. El seu fill/a no ho sap. Com treure profit d'una informació tan delicada?`;
           break;
         case "Estafador":
-          base += ` és un estafador. Potser l'enganxes estafant algú.`;
+          if (this.$store.state.players[this.knows[i].secret.relatedPlayer].tracte === "Dona") {
+            base += ` és una estafadora de talla internacional. `
+          }else {
+            base += ` és un estafador de talla internacional. `;
+          }
+          base += "Segur que aquesta nit té alguna jugada entre mans.";
           break;
         case "Rob Banks":
-          base += ` ha robat divuit bancs, l'última vegada un policia va estar apunt
-          d'enxampar-lo/la amb un tret a la cama. Encara no els ho ha perdonat.`;
+          base += ` ha robat divuit bancs. La darrera vegada la policia gairebé l'enxampa, se'n va ensortir amb un tret a la cama. Encara no els ho ha perdonat.`;
           break;
         case "Robar amfitrió":
-          base += ` pensa robar a l'amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + `.
-            No saps si és personal, però saps que a l'amfitrió no li farà massa
-            gràcia.`;
+          base += ` pensa robar a l'amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + `. No saps si és personal, però saps que no li farà cap gràcia.`;
           break;
         case "Odi amfitrió":
-          base += ` odia profundament l’amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + ` i farà el que pugui per
-            dificultar-li la feina.`;
+          base += ` odia profundament l’amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + ` i farà el que pugui per complicar-li la nit, els negocis, les amistats i la vida en general.`;
 
           let random = Math.random();
           if (random > 0.5) {
@@ -442,32 +446,28 @@ Vue.component('privinfo', {
           }
           break;
         case "Clan familiar":
-          base += ` odia la familia ` + this.$store.state.players[this.knows[i].secret.relatedPlayer].familyName + `, que l'hi
-            ha fet la vida impossible. Odia a qualsevol amb aquest cognom... Potser
-            convidar-lo/la no ha estat la idea més assenyada que ha tingut l'amfitrió.`;
+          base += ` odia la familia ` + this.$store.state.players[this.knows[i].secret.relatedPlayer].familyName + `: sempre li han fet la vida impossible i qualsevol amb aquest cognom és <i>persona non grata</i>... Potser fer-li arribar una invitació no ha estat la idea més assenyada.`;
           break;
         case "Addicte":
-          base += ` és un addicte que farà el que sigui per posar les grapes a
-            alguns carregaments de drogues.`;
+          base += ` té un petit problema amb certes substàncies addictives... de fet, farà el que sigui per posar les grapes a qualsevol carregament de drogues.`;
           break;
         case "Policia":
-          base += ` és un policia infiltrat, que no dubtara en portar-vos a tots
-            a la garjola.`;
+          base += ` és un policia infiltrat que no dubtara en portar-vos a tots a la garjola.`;
           break;
         case "Segall":
-          base += ` va delatar a ` + this.$store.state.players[this.knows[i].secret.relatedPlayer].name + `. Mai se'n va assebentar que va ser ell/a qui el/la va traicionar, però per culpa seva va passar moltes hores a la presó.`;
+          base += ` va delatar a ` + this.$store.state.players[this.knows[i].secret.relatedPlayer].name + `, que mai va saber qui l'havia traït. Una notícia així pot capgirar totalment la nit a més d'una persona.`;
           break;
         case "Amant":
-          base += ` va ser l'amant de la parella de ` + this.$store.state.players[this.knows[i].secret.relatedPlayer].familyName + `, que encara no ho ha descobert.`;
+          base += ` va ser l'amant de la parella de ` + this.$store.state.players[this.knows[i].secret.relatedPlayer].familyName + `.., que mai ho ha sabut! Una revelació d'aquesta magnitud pot tenir conseqüencies terribles.`;
           break;
         case "Negoci Vigilat":
-          base += ` està vigilat i que, per tant, les mercaderies que s'hi amaguen es confiscaran abans que ningú pugui aprofitar-les. Els carregaments d'aquest negoci no compten al final del joc.`;
+          base += ` està vigilat i que, per tant, les mercaderies que s'hi amaguen es confiscaran abans que ningú pugui aprofitar-les. Els carregaments d'aquest negoci no comptaran al final del joc.`;
           break;
         case "Odi Negoci":
-          base += ` odia el propietari/a del negoci ` + this.knows[i].secret.relatedBusiness + `. Intentarà controlar el carregament sigui com sigui.`;
+          base += ` odia el propietari/a del negoci ` + this.knows[i].secret.relatedBusiness + `. Intentarà controlar els seus carregaments sigui com sigui.`;
           break;
         case "En busca":
-          base += ` és un dels individus més buscats de tot el territori. Recompensa de <b>50 fitxes</b> per el delator.`;
+          base += ` és un dels individus més buscats de tot el territori. Recompensa de <b>50 fitxes</b> pel delator.`;
           break;
         default:
           base += `<div class="error">[[error]] - ` + this.knows[i].secret.nom + `</div>`;
@@ -580,7 +580,7 @@ Vue.component('characterprint', {
   template: `<div id="characterprint">
     <div class="container print-info">
       <h1>Personatges:</h1>
-      <p><code>Ctrl + P</code> per generar un PDF amb totes les fitxes de personatge separades per pàgines. Posa-les en un sobre i dona-les als jugadors. O millor, demana-ho a algú altre per a no asebentar-te dels secrets dels altres i poder jugar tu també.</p>
+      <p><code>Ctrl + P</code> per generar un PDF amb totes les fitxes de personatge (acostumen a tenir dues pàgines, es poden imprimir a dues cares). Cal fer arribar la fitxa i la resta de materials a cada jugador amb el marge suficient per a que puguin preparar el seu personatge i estratègia. Idealment, demana-ho a algú que no participi en el joc, per a no asebentar-te dels secrets dels altres i poder jugar tu també.</p>
 
       <hr />
     </div>
