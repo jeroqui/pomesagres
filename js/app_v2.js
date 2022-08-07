@@ -508,7 +508,7 @@ var apprecompte = new Vue({
           <p>Fitxes:</p>
         </div>
         <div class="block">
-          <p>{{chips}}x <a href="src/materials/cheks-test1.pdf">cheks</a></p>
+          <p>{{chips}}x <a href="src/materials/cheks-test1.pdf">xecs</a></p>
         </div>
       </div>
       <div class="split">
