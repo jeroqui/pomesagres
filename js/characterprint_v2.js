@@ -225,7 +225,7 @@ Vue.component('character-wants', {
 
         <ul>
           <li v-if="wants === 'Diamant robat'"><b>1x <i class="fa-solid fa-gem"></i></b> Diamant robat</li>
-          <li v-if="wants === 'Armament'"><b>5x <i class="fa-solid fa-gun"></i></b> Carregaments d'armes</li>
+          <li v-if="wants === 'Armament' || wants === 'Policia'"><b>5x <i class="fa-solid fa-gun"></i></b> Carregaments d'armes</li>
           <li v-if="wants === 'Drogues'"><b>5x <i class="fa-solid fa-pills"></i></b> Carregaments de drogues</li>
           <li v-if="wants === 'Estatus'">L'<b>interés</b> de tots els presents.</li> <!-- // TODO: -->
           <li v-if="wants === 'Diners'"><b>{{starting_money}}x <i class="fa-solid fa-coins"></i></b> fitxes <template v-if="has === 'Bartender'">({{base_money}} de base + {{bartender_bonus}} per que comences amb més que la resta)</template>
