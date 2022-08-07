@@ -478,13 +478,51 @@ var apprecompte = new Vue({
     },
     generated () {
       return store.state.generated;
+    },
+    carregamentsList () {
+      let carregaments = [];
+      for (let i = 0; i < store.state.players.length; i++) {
+        if(store.state.players[i].has === "Armament" || store.state.players[i].has === "Drogues") {
+          for (let j = 0; j < store.state.players[i].carregaments.length; j++) {
+            let found = false;
+            for (let k = 0; k < carregaments.length; k++) {
+              if (store.state.players[i].carregaments[j][0] === carregaments[k][0]) {
+                carregaments[k][1] += store.state.players[i].carregaments[j][1];
+                found = true;
+              }
+            }
+  
+            if (!found) {
+              carregaments.push(store.state.players[i].carregaments[j]);
+            }
+          }
+        }
+      }
+      return carregaments;
     }
   },
   template: `<div id="recompte-material">
-    <p v-if="generated">
-      Per a jugar et caldran <strong>{{chips}}</strong> fitxes i <strong>{{cards.drogues + cards.armament}}</strong> targetes de visita
-      (<template v-if="cards.drogues > 0">{{cards.drogues}} de drogues</template><template v-if="cards.drogues > 0 && cards.armament > 0"> i </template><template v-if="cards.armament > 0">{{cards.armament}} d'armament</template>).
-    </p>
+    <div v-if="generated">
+      <div class="split">
+        <div class="block">
+          <p>Fitxes:</p>
+        </div>
+        <div class="block">
+          <p>{{chips}}x <a href="src/materials/cheks-test1.pdf">cheks</a></p>
+        </div>
+      </div>
+      <div class="split">
+        <div class="block">
+          <p>Cartes de visita (Carregaments):</p>
+        </div>
+        <div class="block">
+          <p><a href="/src/materials/targetes.pdf">Targetes</a> a imprimir:</p>
+          <ul>
+            <li v-for="(carregament, index) in carregamentsList" :key="index">{{carregament[1]}}x <i class="fa-solid fa-compass"></i> a {{carregament[0]}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <p v-else>
       <a href="#generador-personatges" @click.prevent="scrollto('generador-personatges')">Genera els personatges</a> per a saber quant de material necessitaras.
     </p>

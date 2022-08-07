@@ -1,144 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Federo&family=Flow+Block&family=Kristi&family=Limelight&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
-/* Turing CSS */
-/* By Mistrza */
-/* Modified for this project by myself */
+html {
+     height: 100%;
+}
+
+body {
+     padding: 0;
+     margin: 0;
+
+     box-sizing: border-box;
+
+     height: 100%;
+
+     font-family: 'PT Mono', monospace;
+     padding: 2rem 0;
+}
 
 .normes-container {
-  font-family: monospace;
-  font-family: 'Special Elite', cursive !important;
-  /*font-weight: bold;*/
-  text-decoration-skip: none;
-  text-align: justify;
+     max-height: 100%;
+     column-width: 450px;
 
-  margin-bottom: 5rem;
-}
-
-.normes-container hr {
-  border: none;
-  text-align: center;
-}
-.normes-container hr::after {
-  content: " - - - ";
-}
-
-.normes-container h1, .normes-container h2, .normes-container h3 {
-  font-family: 'Special Elite', cursive !important;
-
-  font-size: 16px !important;
-}
-
-.normes-container h1, .normes-container h2 {
-     text-align: center;
-}
-.normes-container h1 {
-     text-transform: uppercase;
-}
-.normes-container h2, .normes-container h3, em, th, .cm-keyword {
-     text-decoration: underline;
-}
-
-.normes-container h2 {
-  margin-top: 3em;
-}
-
-.normes-container h3 {
-  margin-top: 2em;
-}
-
-.normes-container blockquote, .normes-container strong {
-     color: darkblue
-}
-
-.normes-container blockquote {
-     margin-left: 30px;
-     margin-right: 30px
-}
-.normes-container a, .normes-container .footnote-line {
-     color: #333;
-}
-.normes-container em, .normes-container strong {
-     font-style: normal;
-}
-
-.normes-container ul {
-     list-style-type: square
-}
-
-.normes-container #footer p {
-     border-top: 2px solid #333;
-     margin-top: 10px;
-}
-
-/* Codes */
-.cm-s-inner {
-     border-left: 2px solid #333;
-     padding-left: 1em
-}
-
-.cm-s-inner * {
-     color: #333 !important
-}
-
-/* Numbering */
-.normes-container h1 {
-     counter-reset: h2
-}
-.normes-container h2 {
-     counter-reset: h3
-}
-.normes-container h2:before {
-     counter-increment: h2;
-     content: counter(h2) ". "
-}
-.normes-container h3:before {
-     counter-increment: h3;
-     content: counter(h2) "." counter(h3) ". "
-}
-
-
-
-
-
-/* MINE */
-#normes .container {
-     overflow: initial;
+     column-gap: 4rem;
+     margin-left: 10rem;
 }
 
 .normes-image-container {
-     float: right;
-     position: relative;
+     float: left;
+     max-width: 40%;
+     padding: 1rem;
 
-     width: 10rem;
-     height: 12rem;
-
-     z-index: 2;
+     break-before: avoid;
 }
 
 .normes-image-container img {
-     position: absolute;
-     top: -10rem;
-     left: 0;
-
-     width: 700px;
-
-     z-index: -1;
-
-     pointer-events: none;
+     width: 100%;
 }
 
-.normes-image-container.left {
-     float: left;
+.normes-image-container.center {
+     float: unset;
+     margin: 0 auto;
 }
 
-.normes-image-container.left img {
-     left: unset;
-     right: 3rem;
+h1 {
+     column-span: 2;
+}
+
+h1 {
+     font-family: 'Limelight', cursive;
+     font-size: 4rem;
+     font-weight: normal;
+     
+     margin-top: 0;
+     padding-top: 4rem;
+}
+
+h2 {
+     font-size: 2.3rem;
+}
+
+h2, h3, button {
+     font-family: 'Federo', sans-serif;
+     font-weight: normal;
+}
+
+ h1, h2 {
+     text-align: center;
+     break-after: avoid-column;
+}
+ h1 {
+     text-transform: uppercase;
+}
+ h2, h3, em, th, .cm-keyword {
+     text-decoration: underline;
+}
+ blockquote, strong {
+     color: orange 
+}
+ blockquote {
+     margin-left: 30px;
+     margin-right: 30px
+}
+a, .footnote-line {
+     color: #333;
+}
+ em, strong {
+     font-style: normal;
+}
+ ul {
+     list-style-type: square 
 }
 
 
-.normes-image-container + .srclink {
-     position: absolute;
-     left: 0;
 
-     margin-top: 20rem;
+hr {
+     border: none;
+     text-align: center;
+}
+
+hr::after {
+     content: ' --- ';
+}
+
+
+
+/* Numbering */
+h1 {
+     counter-reset: h2 
+}
+ h2 {
+     counter-reset: h3 
+}
+h2:before {
+     counter-increment: h2;
+     content: counter(h2) ". " 
+}
+h3:before {
+     counter-increment: h3;
+     content: counter(h2) "." counter(h3) ". " 
+}
+
+
+
+
+@media print {
+     .normes-container {
+          max-height: unset;
+          column-width: unset;
+     
+          column-gap: unset;
+          margin-left: 0;
+     }
 }

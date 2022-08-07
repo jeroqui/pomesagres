@@ -423,7 +423,7 @@ Vue.component('privinfo', {
           break;
         case "Estafador":
           if (this.$store.state.players[this.knows[i].secret.relatedPlayer].tracte === "Dona") {
-            base += ` és una estafadora de talla internacional. `
+            base += ` és una estafadora de talla internacional. `;
           }else {
             base += ` és un estafador de talla internacional. `;
           }

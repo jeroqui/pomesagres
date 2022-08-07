@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Federo&family=Flow+Block&family=Kristi&family=Limelight&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
 
 ::selection {
 	color: #000000;
@@ -12,7 +14,8 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'PT Mono', monospace;
+  /* font-family: sans-serif; */
   background-color: #333;
   color: white;
 
@@ -27,7 +30,7 @@ section:not(#intro) {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1rem 2rem;
 
@@ -112,6 +115,20 @@ input[type=text], textarea {
 
 .flex-row.center {
   justify-content: center;
+}
+
+
+.split {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.split .block {
+  flex-basis: 250px;
+  flex-grow: 1;
+
+  padding: 0 1rem;
 }
 
 button {
@@ -215,6 +232,13 @@ h2 {
   100% {
     opacity: 0.15;
   }
+}
+
+code {
+  background-color: #222;
+  border-radius: 3px;
+
+  padding: 2px 1rem;
 }
 
 #intro-color {

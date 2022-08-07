@@ -167,9 +167,11 @@ const store = new Vuex.Store({
       var chips = 0;
       for (let i = 0; i < state.players.length; i++){
         if (state.players[i].has === "Diners") {
-          chips += 20;
+          chips += 2;
+        }else if (state.players[i].has === "Bartender") {
+          chips += 1;
         }
-        chips += 10;
+        chips += 1;
       }
       return chips;
     },
