@@ -45,7 +45,7 @@
         <h2 id='les-normes'>Les normes</h2>
         <p>Les normes d’aquest joc són molt simples:</p>
         <ol start=''>
-            <li>No mateu a ningú.</li>
+            <li>No mateu ningú.</li>
             <li>No hi ha més normes.</li>
 
         </ol>
@@ -62,12 +62,12 @@
 
         <p>Reserveu una nit. Avisa els teus amics i genera els personatges corresponents al generador. Un cop hagis
             omplert les invitacions, fes-les arribar a cada jugador juntament amb la seva fitxa privada. Cadascú crearà
-            el seu personatge basat en la seva fitxa secreta.</p>
+            el personatge basat en la seva fitxa secreta.</p>
         <p>El joc es pot desenvolupar allà on vulgueu, però es preveuen alguns espais o zones a la sala de joc:</p>
         <ul>
             <li>la zona de bar</li>
             <li>la zona de menjar (tan formal o informal com us plagui)</li>
-            <li>el lounge</li>
+            <li><i>el lounge</i></li>
             <li>la zona de joc (pòquer, cartes, daus…)</li>
             <li>l’exterior…</li>
 
@@ -83,7 +83,7 @@
             <img src="./../src/mafia_survilance.png" alt="Fotos preses per un periodista d'una banda de mafiosos. Les anotacions explquen una petita historia.">
         </div>
 
-        <p>El que defineix un personatge no és el seu nom, ni la seva aparença, són els seus <strong>actius</strong> i
+        <p>El que defineix un personatge no és el nom ni la aparença; són els seus <strong>actius</strong> i
             el que <strong>desitgen</strong>.</p>
         <p>El que un personatge pot tenir com a actiu és molt divers, però el que fa que aquest joc sigui interessant és
             que tot allò que algú té, algú altre ho dessitja, i ningú té allò que vol.</p>
@@ -208,7 +208,7 @@
             <img src="./../src/invitacions.png" alt="" style="filter: brightness(130%);">
         </div>
 
-        <p>L'amfitrió té un paper destacat. Motivat pel seu desig (i qui sap si per alguna cosa més), ha organitzat la
+        <p>L'amfitrió té un paper destacat. Motivat pel desig (i qui sap si per alguna cosa més), ha organitzat la
             trobada.</p>
         <p>Quan l'amfitrió envia les seves invitacions, ha de donar a cada jugador una mica de context: pistes sobre
             quina relació teniu, quin és el vostre lligam, de què us coneixeu…</p>
@@ -257,7 +257,7 @@
             <li>També pots tenir <strong>estatus</strong>.</li>
 
         </ul>
-        <p>Per a aconseguir el seu objectiu necessites:</p>
+        <p>Per a aconseguir l'objectiu necessites:</p>
         <ul>
             <li>Diners: <strong>&gt; 20 fitxes</strong>.</li>
             <li>Armes o Drogues: <strong>&gt; 4 carregaments</strong>.</li>
@@ -293,7 +293,7 @@
         <p>Excepte el policia, tots els jugadors puntuen de la manera següent:</p>
         <ul>
             <li>Si has aconseguit el teu desig: <strong>+3 punts</strong>.</li>
-            <li>Si has ajudat algú altre a aconseguir el seu desig: <strong>+1 punt</strong>.</li>
+            <li>Si has ajudat algú altre a aconseguir el desig: <strong>+1 punt</strong>.</li>
         </ul>
         <hr />
         <p>Els criteris següents apliquen a tothom, incloent el policia:</p>
@@ -330,6 +330,19 @@
             <img src="./../src/drink.png" alt="">
         </div>
     </div>
+
+    <script>
+
+
+const scrollContainer = document.querySelector("html");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    left: scrollContainer.scrollLeft += evt.deltaY;
+});
+
+
+    </script>
 </body>
 
 </html>
