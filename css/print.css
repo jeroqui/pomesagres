@@ -31,7 +31,7 @@ hr {
   border: 1px solid grey !important;
 }
 
-.gradient {
+.gradient, .confidencial {
   display: none;
 }
 
