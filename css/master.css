@@ -606,7 +606,7 @@ footer .contribuidors span {
 
   .character-wrapper {
     position: relative;
-    height: 80vh;
+    height: 50vh;
 
     overflow: hidden;
   }
@@ -620,8 +620,26 @@ footer .contribuidors span {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10rem;
+    height: 100%;
 
-    background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(170,253,45,0) 100%);
+    background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(51, 51, 51, 0.329) 30%);
+  }
+
+
+  .confidencial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .confidencial span {
+    font-family: 'Special Elite', cursive;
+    font-size: 3rem;
+    color: orange;
+    transform: rotate(-30deg);
   }
 }

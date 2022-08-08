@@ -580,7 +580,8 @@ Vue.component('characterprint', {
   template: `<div id="characterprint">
     <div class="container print-info">
       <h1>Personatges:</h1>
-      <p><code>Ctrl + P</code> per generar un PDF amb totes les fitxes de personatge (acostumen a tenir dues pàgines, es poden imprimir a dues cares). Cal fer arribar la fitxa i la resta de materials a cada jugador amb el marge suficient per a que puguin preparar el seu personatge i estratègia. Idealment, demana-ho a algú que no participi en el joc, per a no asebentar-te dels secrets dels altres i poder jugar tu també.</p>
+      <p><code>Ctrl + P</code> per generar un PDF amb totes les fitxes de personatge (acostumen a tenir dues pàgines, es poden imprimir a dues cares).</p>
+      <p>Cal fer arribar la fitxa i la resta de materials a cada jugador amb el marge suficient per a que puguin preparar el seu personatge i estratègia. Idealment, demana-ho a algú que no participi en el joc, per a no asebentar-te dels secrets dels altres i poder jugar tu també.</p>
 
       <hr />
     </div>
@@ -591,6 +592,7 @@ Vue.component('characterprint', {
       </div>
       <div class="gradient">
       </div>
+      <div class="confidencial"><span>CONFIDENCIAL</span></div>
     </div>
 
     <div class="container print-info">
