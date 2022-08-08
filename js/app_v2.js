@@ -144,6 +144,7 @@ var app = new Vue({
         let control = 0;
         while (unique_haves.includes(reordered_haves_wants[i][1])) {
           let index = Math.floor(Math.random() * reordered_haves_wants.length);
+          // check if new want is === to what he already has
           reordered_haves_wants[i][1] = reordered_haves_wants[index][1];
 
           control++;
