@@ -24,6 +24,8 @@ body {
 
      column-gap: 4rem;
      margin-left: 10rem;
+
+     column-rule: 2px solid gray;
 }
 
 .normes-image-container {
@@ -122,6 +124,12 @@ h3:before {
 }
 
 
+
+@media screen and (max-width: 600px) {
+     .normes-container {
+          margin-left: 1rem;
+     }
+}
 
 
 @media print {
