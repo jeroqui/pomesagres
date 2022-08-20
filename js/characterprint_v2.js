@@ -225,11 +225,11 @@ Vue.component('character-wants', {
 
         <ul>
           <li v-if="wants === 'Diamant robat'"><b>1x <i class="fa-solid fa-gem"></i></b> Diamant robat</li>
-          <li v-if="wants === 'Armament'"><b>5x <i class="fa-solid fa-gun"></i></b> Carregaments d'armes</li>
-          <li v-if="wants === 'Drogues'"><b>5x <i class="fa-solid fa-pills"></i></b> Carregaments de drogues</li>
+          <li v-if="wants === 'Armament'"><b>4x <i class="fa-solid fa-gun"></i></b> Carregaments d'armes</li>
+          <li v-if="wants === 'Drogues'"><b>4x <i class="fa-solid fa-pills"></i></b> Carregaments de drogues</li>
           <li v-if="wants === 'Estatus'">L'<b>interés</b> de tots els presents.</li> <!-- // TODO: -->
           <li v-if="wants === 'Diners'"><b>{{starting_money}}x <i class="fa-solid fa-coins"></i></b> fitxes <template v-if="has === 'Bartender'">({{base_money}} de base + {{bartender_bonus}} per que comences amb més que la resta)</template>
-          </li>
+        </li>
         </ul>
         </template>
 
@@ -395,7 +395,7 @@ Vue.component('privinfo', {
     know_text(i) {
       let base = "";
 
-      let random = Math.random();
+      var random = Math.random();
       if (random > 0.4){
         base += `Saps que `;
       } else if (random > 0.7){
@@ -422,7 +422,7 @@ Vue.component('privinfo', {
           base += this.$store.state.players[this.knows[i].secret.relatedPlayer].familyName + `. El seu fill/a no ho sap. Com treure profit d'una informació tan delicada?`;
           break;
         case "Estafador":
-          if (this.$store.state.players[this.knows[i].secret.relatedPlayer].tracte === "Dona") {
+          if (this.$store.state.players[this.knows[i].playerkey].tracte === "Dona") {
             base += ` és una estafadora de talla internacional. `;
           }else {
             base += ` és un estafador de talla internacional. `;
@@ -438,7 +438,7 @@ Vue.component('privinfo', {
         case "Odi amfitrió":
           base += ` odia profundament l’amfitrió, ` + this.$store.state.players[0].name + " " + this.$store.state.players[0].familyName + ` i farà el que pugui per complicar-li la nit, els negocis, les amistats i la vida en general.`;
 
-          let random = Math.random();
+          random = Math.random();
           if (random > 0.5) {
             base += ` Potser és un bon aliat?`;
           }else {
@@ -501,7 +501,7 @@ Vue.component('character', {
   template: `
   <div class="character">
     <div class="flex-row">
-      <h2 v-if="player.name && player.familyName">{{player.name}} <strong>{{player.familyName}}</strong></h2>
+      <h2 v-if="player.name">{{player.name}} <strong v-if="player.familyName">{{player.familyName}}</strong></h2>
       <h2 v-else>Personatge <strong>{{key + 1}}</strong></h2>
       <span v-if="playerKey === 0">Amfitrió: {{player.jugador}}</span>
       <span v-else>Jugador: {{player.jugador}}</span>
