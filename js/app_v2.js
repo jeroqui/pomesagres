@@ -400,6 +400,28 @@ var app = new Vue({
         }
       }
 
+
+      // Custom priv info
+      // -- Tell host who is the bartender
+      // Find bartender player index
+      let bartenderindex = -1;
+      for (let i = 0; i < store.state.players.length; i++) {
+        if (store.state.players[i].has === "Bartender") {
+          bartenderindex = i;
+          break;
+        }
+      }
+
+      if (bartenderindex != -1) { // if a bartender was found:
+        let hostbartendersecret = {
+          secret: {
+            nom: "Bartender"
+          },
+          playerkey: bartenderindex
+        };
+        store.commit("playerknows", {secret: hostbartendersecret, playerkey: 0}); // Give secret to bartender
+      }
+
       this.status = "Generació completa";
       store.state.generated = true;
       window.gtag('event', 'generate');
