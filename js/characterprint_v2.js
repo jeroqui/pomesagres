@@ -471,6 +471,7 @@ Vue.component('privinfo', {
           break;
         case "Bartender":
           base = `Saps que ${this.$store.state.players[this.knows[i].playerkey].name} és el teu Bartender.`;
+          break;
         default:
           base += `<div class="error">[[error]] - ` + this.knows[i].secret.nom + `</div>`;
       }
