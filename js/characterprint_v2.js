@@ -469,6 +469,8 @@ Vue.component('privinfo', {
         case "En busca":
           base += ` és un dels individus més buscats de tot el territori. Recompensa de <b>50 fitxes</b> pel delator.`;
           break;
+        case "Bartender":
+          base = `Saps que ${this.$store.state.players[this.knows[i].playerkey].name} és el teu Bartender.`;
         default:
           base += `<div class="error">[[error]] - ` + this.knows[i].secret.nom + `</div>`;
       }
